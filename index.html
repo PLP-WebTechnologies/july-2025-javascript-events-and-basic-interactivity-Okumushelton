@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-logo">Shelton</div>
+      <ul class="nav-menu">
+        <li><a href="#event-section" class="nav-link">Events</a></li>
+        <li><a href="#interactive-section" class="nav-link">Components</a></li>
+        <li><a href="#form-section" class="nav-link">Form</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div class="container">
+      <header>
+        <h1>Interactive Web Page</h1>
+        <p>Explore JavaScript interactivity with these features</p>
+      </header>
+
+      <!-- Theme Toggle Button -->
+      <div class="theme-toggle">
+        <button id="themeToggle">Dark Mode</button>
+      </div>
+
+      <!-- Part 1: Event Handling -->
+      <section id="event-section">
+        <h2>Event Handling Examples</h2>
+        <p>Try these different event types to see JavaScript in action:</p>
+
+        <div class="interactive-controls">
+          <div class="control-box">
+            <h3>Click Events</h3>
+            <button id="clickButton">Click Me!</button>
+            <p id="clickFeedback">No clicks yet</p>
+          </div>
+
+          <div class="control-box">
+            <h3>Mouse Events</h3>
+            <div id="mouseArea">Hover over me</div>
+            <p id="mousePosition">Mouse position: (0, 0)</p>
+          </div>
+
+          <div class="control-box">
+            <h3>Keyboard Events</h3>
+            <input type="text" id="keyboardInput" placeholder="Type here..." />
+            <p id="keyboardFeedback">Last key pressed:</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 2: Interactive Elements -->
+      <section id="interactive-section">
+        <h2>Interactive Elements</h2>
+
+        <!-- Counter -->
+        <div class="control-box">
+          <h3>Counter</h3>
+          <div class="counter-value" id="counterValue">0</div>
+          <div class="counter-buttons">
+            <button id="decrementBtn">-</button>
+            <button id="resetBtn">Reset</button>
+            <button id="incrementBtn">+</button>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <h3 style="margin-top: 30px">FAQ Section</h3>
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-question">
+              What is JavaScript used for?
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              JavaScript is a programming language primarily used for creating
+              interactive web pages. It can manipulate HTML and CSS, handle
+              events, create animations, and much more.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              What are event listeners?
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              Event listeners are functions in JavaScript that wait for a
+              specific event to occur on a particular HTML element, such as a
+              click, hover, or keypress, and then execute code in response.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              What is DOM manipulation?
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              DOM manipulation refers to using JavaScript to interact with and
+              modify the Document Object Model (DOM) of a web page. This
+              includes changing text, styles, attributes, adding or removing
+              elements, and more.
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Interface -->
+        <h3 style="margin-top: 30px">Tabbed Interface</h3>
+        <div class="tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+            <button class="tab-btn" data-tab="tab2">Tab 2</button>
+            <button class="tab-btn" data-tab="tab3">Tab 3</button>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+              <h4>First Tab Content</h4>
+              <p>
+                This is the content for the first tab. JavaScript makes it easy
+                to switch between different content sections.
+              </p>
+            </div>
+            <div class="tab-pane" id="tab2">
+              <h4>Second Tab Content</h4>
+              <p>
+                This is the content for the second tab. Each tab can contain
+                different information while saving space.
+              </p>
+            </div>
+            <div class="tab-pane" id="tab3">
+              <h4>Third Tab Content</h4>
+              <p>
+                This is the content for the third tab. Tabbed interfaces are
+                common in modern web design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 3: Form Validation -->
+      <section id="form-section">
+        <h2>Form Validation</h2>
+        <p>Please fill out this form with valid information:</p>
+
+        <form id="validationForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" />
+            <div class="error" id="nameError">
+              Please enter a valid name (at least 2 characters)
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+            <div class="error" id="emailError">
+              Please enter a valid email address
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Create a password"
+            />
+            <div class="error" id="passwordError">
+              Password must be at least 8 characters with one number and one
+              special character
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your phone number"
+            />
+            <div class="error" id="phoneError">
+              Please enter a valid 10-digit phone number
+            </div>
+          </div>
+
+          <button type="submit">Submit Form</button>
+        </form>
+
+        <div class="success-message" id="successMessage">
+          Form submitted successfully! Thank you.
+        </div>
+      </section>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
